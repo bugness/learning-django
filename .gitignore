@@ -1,7 +1,8 @@
-# Byte-compiled / optimized / DLL files
+# Byte-compiled / optimized / DLL files / Env
 __pycache__/
 *.py[cod]
 *$py.class
+venv/
 
 # Django stuff:
 *.log
