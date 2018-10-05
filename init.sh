@@ -5,3 +5,4 @@ sudo ln -s /home/box/web/etc/gunicorn.conf /etc/gunicorn.d/django.conf
 sudo ln -s /home/box/web/etc/hello.gunicorn.conf /etc/gunicorn.d/hello.conf
 sudo /etc/init.d/gunicorn restart
 sudo /etc/init.d/mysql start
+mysql -u root -e "CREATE DATABASE stepic_django;"
