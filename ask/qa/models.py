@@ -2,6 +2,14 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
+class QuestionManager(models.Manager):
+    def new(self):
+        pass
+
+    def popular(self):
+        pass
+
+
 class Question(models.Model):
     title = models.CharField(max_length=255)
     text = models.TextField(null=True)
@@ -9,14 +17,7 @@ class Question(models.Model):
     rating = models.IntegerField(default=0)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     likes = models.ManyToManyField(User, related_name='like')
-
-
-class QuestionManager:
-    def new(self):
-        pass
-
-    def popular(self):
-        pass
+    objects = QuestionManager()
 
 
 class Answer(models.Model):
